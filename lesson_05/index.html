@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&family=Single+Day&display=swap" rel="stylesheet">
+
+    <title>Deserts</title>
+</head>
+<body>
+<div class="main"> 
+    <h1 class="title-text">Deserts</h1>
+    <div w3-include-html="text.txt"></div>
+    <div class="container">
+        <!-- Original Category -->
+        <div class="category" id="category1">
+            <p>Icecream</p>
+            <p><input type="submit" value="Vanilla" id="vanilla"></p>
+            <p><input type="submit" value="Chocolate" id="chocolate"></p>
+            <p><input type="submit" value="Strawberry" id="strawberry"></p>
+        </div>
+
+        <!-- First Copied Category -->
+        <div class="category" id="category2">
+            <p>Cakes</p>
+            <p><input type="submit" value="Chocolate Cake" id="chocolate-cake"></p>
+            <p><input type="submit" value="Lemon Cake" id="lemon-cake"></p>
+            <p><input type="submit" value="Red Velvet Cake" id="red-velvet-cake"></p>
+        </div>
+
+        <!-- Second Copied Category -->
+        <div class="category" id="category3">
+            <p>Cookies</p>
+            <p><input type="submit" value="Chocolate Chip" id="chocolate-chip"></p>
+            <p><input type="submit" value="Oatmeal" id="oatmeal"></p>
+            <p><input type="submit" value="Peanut Butter" id="peanut-butter"></p>
+        </div>
+    </div>
+    <div class="content">
+        <iframe class="info" src="text.txt" width="80%" height="400px"></iframe>
+    </div>
+</div>
+
+<script>
+    // Update iframe src based on clicked dessert
+    $("#vanilla").click(function() {
+        $(".info").attr("src", "category_01/vanilla/vanilla.txt");
+    });
+
+    $("#chocolate-cake").click(function() {
+        $(".info").attr("src", "category_02/chocolate-cake/chocolate-cake.txt");
+    });
+
+    $("#chocolate-chip").click(function() {
+        $(".info").attr("src", "category_03/chocolate-chip/chocolate-chip.txt");
+    });
+</script>
+</body>
+</html>
